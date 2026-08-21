@@ -42,6 +42,17 @@
       margin-bottom: 20px;
     }
 
+    /* --- NEW LOGO STYLING --- */
+    .app-logo {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+      border: 2px solid var(--border-color);
+    }
+
     h2 {
       margin-top: 0;
       text-align: center;
@@ -304,6 +315,10 @@
 
   <!-- CALCULATOR CARD -->
   <div class="card">
+    
+    <!-- ADDED LOGO HERE -->
+    <img src="echo-logo.png" alt="Project Echo Airsoft Logo" class="app-logo" onerror="this.style.display='none'">
+    
     <h2>Project Echo Airsoft Calculator</h2>
     
     <!-- FIELD LIMIT PRESETS -->
@@ -583,9 +598,9 @@
         const ms = fps * 0.3048;
         const kg = weight / 1000;
         const rawJoules = 0.5 * kg * (ms * ms);
-        const displayJoules = rawJoules.toFixed(2); // Round for display
+        const displayJoules = rawJoules.toFixed(2); 
         joulesInput.value = displayJoules;
-        updateStatus(parseFloat(displayJoules)); // Fix: Pass the rounded value so it exactly matches the text box
+        updateStatus(parseFloat(displayJoules)); 
       }
     }
 
@@ -599,7 +614,7 @@
         const ms = Math.sqrt(msSquare);
         const fps = ms / 0.3048;
         fpsInput.value = Math.round(fps);
-        updateStatus(joules); // Fix: Evaluate based exactly on the Joules typed in the box
+        updateStatus(joules); 
       }
     }
 
